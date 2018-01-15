@@ -16,6 +16,8 @@ public class MenuActivity extends AppCompatActivity {
     public void onButtonPressed(View view){
         Intent goToLogin = new Intent(this, LoginActivity.class);
         Intent goToRegister = new Intent(this, RegisterActivity.class);
+        Intent goToBuy = new Intent(this, BuyActivity.class);
+        Intent goToRent = new Intent(this, RentActivity.class);
         switch(view.getId()){
             case R.id.loginButton:
                 startActivity(goToLogin);
@@ -23,6 +25,11 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.registerButton:
                 startActivity(goToRegister);
                 break;
+            case R.id.buyMenu:
+                startActivity(goToBuy);
+                break;
+            case R.id.rentMenu:
+                startActivity(goToRent);
         }
     }
 }
