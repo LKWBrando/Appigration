@@ -85,7 +85,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Location: "/>
+            android:id="@+id/locationText"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1.25"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:gravity="center">
 
 
@@ -180,6 +180,23 @@
             android:layout_height="wrap_content"
             android:text="Not Furnished"
             android:textSize="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:id="@+id/okay"
+                android:text="OKAY"/>
+
+
+        </LinearLayout>
+
+
 
 
 
