@@ -38,17 +38,11 @@ public class BuyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_buy);
 
         okay = (Button) findViewById(R.id.okay);
-
         locationText = (EditText) findViewById(R.id.locationText);
-
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-
         seekBar.setMax(max);
-
         value = seekBar.getProgress();
-
         priceValue = (TextView) findViewById(R.id.price);
-
         final String price = Integer.toString(value);
 
         okay.setOnClickListener(new View.OnClickListener() {
@@ -61,16 +55,6 @@ public class BuyActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
-
-
-
-
-
 
        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
            @Override
