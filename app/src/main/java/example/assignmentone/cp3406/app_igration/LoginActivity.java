@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 while(cursor.moveToNext()){
                     if(usernameString.equals(cursor.getString(1)) && userpassString.equals(cursor.getString(2))){
                         cursor.close();
-                        preferences.edit().putString("loggedUser", null).apply();
+                        preferences.edit().putString("loggedUser", usernameString).apply();
                         loginPassed = true;
                     }
                 }
@@ -52,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
                     Toast errorMsg = Toast.makeText(this, "UserName or Password is incorrect!", Toast.LENGTH_SHORT);
                     errorMsg.show();
                 }else{
+                    Toast loginSuccess = Toast.makeText(this, "Login Sucessful!", Toast.LENGTH_SHORT);
+                    loginSuccess.show();
                     Intent goToLogin = new Intent(this, MenuActivity.class);
                     startActivity(goToLogin);
                 }

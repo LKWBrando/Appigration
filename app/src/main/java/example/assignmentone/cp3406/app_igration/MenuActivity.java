@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
     TextView currentUser;
@@ -69,6 +70,8 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             case R.id.logoutButton:
                 preferences.edit().putString("loggedUser", null).apply();
+                Toast logoutMessage = Toast.makeText(this, "Logged off successfully!", Toast.LENGTH_SHORT);
+                logoutMessage.show();
                 Intent refreshMenu = new Intent(this, MenuActivity.class);
                 startActivity(refreshMenu);
         }
