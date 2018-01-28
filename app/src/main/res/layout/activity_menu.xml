@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="3"
-    tools:context="example.assignmentone.cp3406.app_igration.MainActivity">
+    tools:context="example.assignmentone.cp3406.app_igration.MenuActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#ffffff"
-                android:background="#ff0000"
+                android:background="#800000"
                 android:gravity="center"
                 android:layout_marginTop="70dp"/>
 
@@ -46,7 +46,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#ffffff"
-                android:background="#ff0000"
+                android:background="#800000"
                 android:gravity="center"
                 android:layout_marginTop="140dp"/>
         </RelativeLayout>
@@ -73,15 +73,18 @@
 
                 <ImageButton
                     android:id="@+id/buyMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/buyimg"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center"
+                    android:background="#ffffff"
                     android:onClick="onButtonPressed"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:text="Buy"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -95,14 +98,17 @@
                 <ImageButton
                     android:id="@+id/rentMenu"
                     android:onClick="onButtonPressed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/rentimg"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:text="Rent"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -124,15 +130,16 @@
 
                 <ImageButton
                     android:id="@+id/searchMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:onClick="onButtonPressed"/>
+                    android:onClick="onButtonPressed"
+                    app:srcCompat="@android:drawable/ic_search_category_default" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:text="Search"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -145,15 +152,15 @@
 
                 <ImageButton
                     android:id="@+id/listingMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    />
+                    app:srcCompat="@android:drawable/ic_input_add" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:text="New Listing"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -166,6 +173,9 @@
             android:text="Log in"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#228B22"
+            android:visibility="visible"
+            android:layout_marginTop="5dp"
             android:onClick="onButtonPressed"/>
 
         <Button
@@ -175,12 +185,17 @@
             android:text="Register"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#228B22"
+            android:visibility="visible"
+            android:layout_marginTop="5dp"
             android:onClick="onButtonPressed"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:visibility="invisible"
+            android:text="User Info"/>
     </LinearLayout>
 </LinearLayout>

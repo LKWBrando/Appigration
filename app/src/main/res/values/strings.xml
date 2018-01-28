@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">App-igration</string>
-    <string name="welcomeText">Welcome to the One-Stop solution to all your housing needs!</string>
-    <string name="descriptionText">This app allows you to browse a collection of house listings in Singapore according to your selected preferences!
-        Best of all? It is completely free to browse</string>
+    <string name="welcomeText">Welcome to the One-Stop solution\nto all your housing needs!</string>
+    <string name="descriptionText">Browse a collection of house listings in Singapore.\nBest of all? It is completely free to browse</string>
 </resources>

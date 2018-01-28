@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="3"
-    tools:context="example.assignmentone.cp3406.app_igration.MainActivity">
+    tools:context="example.assignmentone.cp3406.app_igration.RegisterActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -28,13 +28,13 @@
 
             <TextView
                 android:id="@+id/welcomeHeader"
-                android:layout_width="100dp"
+                android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:text="Register"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#ffffff"
-                android:background="#ff0000"
+                android:background="#800000"
                 android:gravity="center"
                 android:layout_marginTop="70dp"/>
 
@@ -46,20 +46,30 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#ffffff"
-                android:background="#ff0000"
+                android:background="#800000"
                 android:gravity="center"
                 android:layout_marginTop="140dp"/>
         </RelativeLayout>
     </LinearLayout>
 
+    <!--Body containing the various Text & Edit fields-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="Register with us by providing some basic information about yourself!"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_gravity="center"
@@ -67,43 +77,53 @@
 
             <TextView
                 android:id="@+id/userName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="#000000"
                 android:text="Username :"
-                android:layout_gravity="center" />
+                android:gravity="center"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/inputUserName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
+                android:inputType="text"
+                android:ems="8"
+                android:maxLength="20"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#000000"
                 android:text="Password :"
                 android:layout_gravity="center" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/inputUserPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
+                android:inputType="textPassword"
+                android:ems="8"
+                android:maxLength="15"
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_gravity="center"
@@ -111,98 +131,86 @@
 
             <TextView
                 android:id="@+id/confirmPassword"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="#000000"
                 android:text="Confirm Password :"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/inputConfirmPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
+                android:inputType="textPassword"
+                android:ems="8"
+                android:maxLength="15"
+
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/phoneNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Mobile Phone Number :"
-                android:layout_gravity="center" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/emailAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="E-mail Address :"
-                android:layout_gravity="center" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/residence"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Place of Residence :"
-                android:layout_gravity="center" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="8"/>
-        </LinearLayout>
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="Social Media Plugin Here"
-            android:layout_weight="1"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/userPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="Mobile Phone Number :"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/inputUserPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="8"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/userEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="E-mail Address :"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+            <!--https://stackoverflow.com/questions/9355899/android-email-edittext-validation-->
+            <EditText
+                android:id="@+id/inputUserEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="8"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="200dp"
             android:layout_height="0dp"
+            android:background="#4a8e50"
             android:text="Register"
             android:layout_gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="registerButtonPressed"/>
     </LinearLayout>
 </LinearLayout>
