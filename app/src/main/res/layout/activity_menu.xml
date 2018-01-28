@@ -56,20 +56,23 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:weightSum="5">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_weight="2.5">
+            android:layout_weight="2"
+            android:weightSum="2">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:weightSum="2">
 
                 <ImageButton
                     android:id="@+id/buyMenu"
@@ -79,12 +82,14 @@
                     android:scaleType="fitXY"
                     android:layout_gravity="center"
                     android:background="#ffffff"
+                    android:layout_weight="1"
                     android:onClick="onButtonPressed"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
+                    android:layout_weight="1"
                     android:text="Buy"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -93,7 +98,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:weightSum="2">
 
                 <ImageButton
                     android:id="@+id/rentMenu"
@@ -101,6 +107,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:background="#ffffff"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/rentimg"
                     android:scaleType="fitXY"
                     android:layout_gravity="center"/>
@@ -109,6 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
+                    android:layout_weight="1"
                     android:text="Rent"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -120,13 +128,15 @@
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_weight="2.5">
+            android:layout_weight="2"
+            android:weightSum="2">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:weightSum="2">
 
                 <ImageButton
                     android:id="@+id/searchMenu"
@@ -134,6 +144,9 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:onClick="onButtonPressed"
+                    android:background="#ffffff"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
                     app:srcCompat="@android:drawable/ic_search_category_default" />
 
                 <TextView
@@ -141,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
                     android:text="Search"
+                    android:layout_weight="1"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
@@ -148,13 +162,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:weightSum="2">
 
                 <ImageButton
                     android:id="@+id/listingMenu"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     app:srcCompat="@android:drawable/ic_input_add" />
 
                 <TextView
@@ -162,40 +180,75 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
                     android:text="New Listing"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="200dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="Log in"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#228B22"
-            android:visibility="visible"
-            android:layout_marginTop="5dp"
-            android:onClick="onButtonPressed"/>
+            android:layout_weight="1">
 
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
-            android:text="Register"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#228B22"
-            android:visibility="visible"
-            android:layout_marginTop="5dp"
-            android:onClick="onButtonPressed"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:visibility="invisible"
-            android:text="User Info"/>
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Log in"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#228B22"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onButtonPressed"/>
+
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Register"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#228B22"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onButtonPressed"
+                    android:layout_below="@id/loginButton"/>
+
+                <TextView
+                    android:id="@+id/currentUser"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Welcome"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"/>
+
+                <Button
+                    android:id="@+id/logoutButton"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Log Out"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#228B22"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onButtonPressed"
+                    android:layout_below="@id/loginButton"/>
+            </RelativeLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
